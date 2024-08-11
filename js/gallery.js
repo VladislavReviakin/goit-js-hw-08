@@ -93,10 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-//import * as basicLightbox from 'basiclightbox'
+import * as basicLightbox from 'basiclightbox'
 
-//const instance = basicLightbox.create(`
-//    <img src="${origin}" width="800" height="600">
-//`)
+const instance = basicLightbox.create(`
+    <img src="${original}" width="800" height="600">
+`)
 
-//instance.show()
+instance.show()
