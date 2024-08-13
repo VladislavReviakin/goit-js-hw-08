@@ -88,15 +88,15 @@ gallery.addEventListener('click', event => {
 document.addEventListener('DOMContentLoaded', () => {
   const images = document.querySelectorAll('.gallery-image');
   images.forEach(element => {
+    element.addEventListener('click', function (event) {
+      const imageUrl = event.target.dataset.source 
+      const instance = basicLightbox.create(`
+    <img src="${imageUrl}" width="800" height="600">
+`)
+
+instance.show()
+    })
     element.style.width = '360px';
     element.style.height = '200px'
   });
 });
-
-import * as basicLightbox from 'basiclightbox'
-
-const instance = basicLightbox.create(`
-    <img src="${original}" width="800" height="600">
-`)
-
-instance.show()
